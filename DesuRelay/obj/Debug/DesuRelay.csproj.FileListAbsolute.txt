@@ -1,0 +1,11 @@
+C:\Users\ab\source\repos\DesuRelay\DesuRelay\bin\Debug\DesuRelay.exe.config
+C:\Users\ab\source\repos\DesuRelay\DesuRelay\bin\Debug\DesuRelay.exe.manifest
+C:\Users\ab\source\repos\DesuRelay\DesuRelay\bin\Debug\DesuRelay.application
+C:\Users\ab\source\repos\DesuRelay\DesuRelay\bin\Debug\DesuRelay.exe
+C:\Users\ab\source\repos\DesuRelay\DesuRelay\bin\Debug\DesuRelay.pdb
+C:\Users\ab\source\repos\DesuRelay\DesuRelay\obj\Debug\DesuRelay.csprojAssemblyReference.cache
+C:\Users\ab\source\repos\DesuRelay\DesuRelay\obj\Debug\DesuRelay.csproj.CoreCompileInputs.cache
+C:\Users\ab\source\repos\DesuRelay\DesuRelay\obj\Debug\DesuRelay.exe.manifest
+C:\Users\ab\source\repos\DesuRelay\DesuRelay\obj\Debug\DesuRelay.application
+C:\Users\ab\source\repos\DesuRelay\DesuRelay\obj\Debug\DesuRelay.exe
+C:\Users\ab\source\repos\DesuRelay\DesuRelay\obj\Debug\DesuRelay.pdb
