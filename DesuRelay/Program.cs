@@ -6,7 +6,7 @@ using System.Text;
 
 public static class RelayWitch
 {
-    private const int listenPort = 6112;
+    //private const int listenPort = 6112;
 
     public static IPAddress GetBroadcast(IPAddress host, IPAddress mask)
     {
@@ -43,25 +43,22 @@ public static class RelayWitch
         return new IPAddress(broadcastAddress);
     }
 
-    private static void StartListener()
+    private static void StartListener(int listenPort)
     {
         UdpClient listener = new UdpClient(listenPort);
         IPEndPoint source_address = new IPEndPoint(IPAddress.Any, listenPort);
         IPAddress[] localIPs = Dns.GetHostAddresses(Dns.GetHostName());
-        Console.WriteLine("DesuRelay started...");
+        Console.WriteLine("Found local adresses:");
         Console.WriteLine("------------------------------");
         foreach (NetworkInterface netInterface in NetworkInterface.GetAllNetworkInterfaces())
         {
-            Console.WriteLine("Name: " + netInterface.Name);
-            Console.WriteLine("Description: " + netInterface.Description);
-            Console.WriteLine("Addresses: ");
             IPInterfaceProperties ipProps = netInterface.GetIPProperties();
             foreach (UnicastIPAddressInformation addr in ipProps.UnicastAddresses)
             {
                 Console.WriteLine(" " + addr.Address.ToString());
             }
-            Console.WriteLine("*** ***");
         }
+        Console.WriteLine("Broadcast from local adresses will be ignored.");
         Console.WriteLine("------------------------------");
         try
         {
@@ -124,7 +121,10 @@ public static class RelayWitch
 
     public static void Main()
     {
-        StartListener();
+        Console.WriteLine("DesuRelay started...");
+        Console.WriteLine("Specify port (6112 for WC3): ");
+        int port = Convert.ToInt32(Console.ReadLine());
+        StartListener(port);
         Console.ReadKey();
     }
 }
