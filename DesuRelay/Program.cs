@@ -124,7 +124,15 @@ public static class RelayWitch
         Console.WriteLine("DesuRelay started...");
         Console.WriteLine("Specify port (6112 for WC3): ");
         int port = Convert.ToInt32(Console.ReadLine());
-        StartListener(port);
-        Console.ReadKey();
+        if (port <= 0 | port >= 65535)
+        {
+            Console.WriteLine("Port should be between 1 and 65535");
+            Console.ReadKey();
+        }
+        else
+        {
+            StartListener(port);
+            Console.ReadKey();
+        }
     }
 }
